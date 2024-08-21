@@ -385,6 +385,7 @@ code:not(.hljs) {
   font-size: 0.9rem;
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
+  box-shadow: var(--code-shadow);
 }
 
 .hljs {
@@ -513,12 +514,116 @@ blockquote {
 }
 
 hr {
-  border: none;
-  border-top: 1px solid rgb(var(--border-rgb));
-  margin: 1rem 0;
+  border: 1px dashed rgb(var(--border-rgb));
+  margin: 2rem 0;
 }
 hr.table {
+  border: none;
+  border-top: 1px solid rgb(var(--border-rgb));
   margin: 0.5rem 0;
+}
+
+.XDocsPageNavigationSearch button {
+  z-index: 9;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(var(--bg-rgb));
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid rgb(var(--border-rgb));
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(var(--muted-rgb));
+}
+.XDocsPageNavigationSearch button:hover {
+  background: rgb(var(--hover-rgb));
+}
+.XDocsPageNavigationSearch button:active {
+  background: rgb(var(--pressed-rgb));
+}
+.XDocsPageNavigationSearch iframe {
+  display: none;
+}
+
+.XDocsSearchWrapper {
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.XDocsSearchWrapper .XDocsSearchContainer {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgb(var(--bg-rgb));
+  color: rgb(var(--text-rgb));
+  box-shadow: var(--code-shadow);
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.XDocsSearchWrapper .XDocsSearchContainer input {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(var(--border-rgb));
+  outline: none;
+  font-family: Rubik, sans-serif;
+}
+.XDocsSearchWrapper .XDocsSearchContainer input:focus {
+  box-shadow: inset 0 0 0 1px rgb(var(--text-rgb));
+}
+
+.XDocsSearchResults {
+  display: block;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.XDocsSearchResults.empty {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(var(--muted-rgb));
+}
+.XDocsSearchResults a + a {
+  border-top: 1px solid rgb(var(--border-rgb));
+}
+.XDocsSearchResults a {
+  background-color: rgb(var(--bg-rgb));
+  color: rgb(var(--text-rgb));
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  text-decoration: none;
+  outline: none;
+}
+.XDocsSearchResults a:hover {
+  background-color: rgb(var(--hover-rgb));
+}
+.XDocsSearchResults a:active {
+  background-color: rgb(var(--pressed-rgb));
+}
+.XDocsSearchResults a:focus {
+  background-color: rgb(var(--hover-rgb));
+  box-shadow: inset 0 0 0 1px rgb(var(--text-rgb));
+}
+.XDocsSearchResults a:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 /*# sourceMappingURL=%D1%82%D0%B5%D0%BC%D0%B0.css.map */
