@@ -2,4 +2,4 @@
 
 XDOCS_THEME_PATH="$1"
 
-xdocs generate розмітка веб "$XDOCS_THEME_PATH"
+докс перетворити --вхід=розмітка --вихід=веб --вигляд="$XDOCS_THEME_PATH"
