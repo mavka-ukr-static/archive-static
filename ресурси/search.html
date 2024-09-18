@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="xdocs-url-prefix" content="{{PAGE_URL_PREFIX}}">
+</head>
+<body>
+
+<script>
+  const searchData = JSON.parse("[{\"title\":\"Вступ\",\"content\":\"# Архів Мавки\\n\\n<subject>Архів Мавки</subject> зберігає випуски <subject>Мавки</subject> <keyword>та</keyword> випуски\\nпроектів <subject>Мавки</subject>. А\\nтакож інші документи, що стосуються\\n<subject>Мавки</subject>.\",\"path\":\"index.html\"},{\"title\":\"Мавка 0.111.0\",\"content\":\"# Мавка 0.111.0\\n\\n<subject>Мавка 0.111.0</subject> принесла <subject>Машину Мавки</subject> <keyword>та</keyword> <subject>Код</subject>\\nна <subject>\\nЦілі</subject>.\\n\\n## Завантажити\\n\\n| Назва             | Файли                                                                                                                                                                                                                                                                                                                   |\\n|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\\n| Мавка для Linux   | [мавка-0.111.0-x86_64-linux.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/мавка-0.111.0-x86_64-linux.zip)<hr class=\\\"table\\\"/>[мавка-0.111.0-aarch64-linux.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/мавка-0.111.0-aarch64-linux.zip)         |\\n| Мавка для Windows | [mavka-0.111.0-x86_64-windows.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/mavka-0.111.0-x86_64-windows.zip)<hr class=\\\"table\\\"/>[mavka-0.111.0-aarch64-windows.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/mavka-0.111.0-aarch64-windows.zip) |\\n| Код Мавки         | [мавка-0.111.0-код.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/мавка-0.111.0-код.zip)                                                                                                                                                                                             |\\n| Розширення        | [мавка-0.111.0-приклад_РМв1.zip](https://github.com/mavka-ukr/files/raw/refs/heads/main/випуски-мавки/0.111.0/мавка-0.111.0-приклад_РМв1.zip)                                                                                                                                                                           |\\n\\n## Зміни\\n\\n- Переписано на <subject>Ціль</subject>\",\"path\":\"випуск-мавки-0.111.0.html\"}]");
+
+  window.addEventListener("message", (event) => {
+    const eventData = event.data;
+    const eventId = eventData.id;
+    const eventType = eventData.type;
+    if (eventType === "search") {
+      const query = eventData.query;
+      const results = searchData.filter((item) => {
+        return item.title.toLowerCase().includes(query.toLowerCase());
+      });
+      window.parent.postMessage(
+        {
+          id: eventId,
+          result: results
+        },
+        "*"
+      );
+    }
+  });
+</script>
+</body>
+</html>
