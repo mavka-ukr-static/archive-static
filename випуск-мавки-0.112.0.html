@@ -9,7 +9,7 @@
 
   <meta name="description" content="">
 
-  <title>Архів Мавки</title>
+  <title>Мавка 0.112.0 | Архів Мавки</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/архів.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/архів.лого.svg">
@@ -31,7 +31,7 @@
 </div>
 <a
   href="./index.html"
-  class="XDocsPageNavigationItem active"
+  class="XDocsPageNavigationItem "
   data-navigation-item="Вступ"
 >
   Вступ
@@ -39,7 +39,7 @@
 <button
   class="XDocsPageNavigationItem"
   data-navigation-item="Випуски Мавки"
-  data-navigation-item-expanded="false">
+  data-navigation-item-expanded="true">
   Випуски Мавки
   <span class="XDocsPageNavigationItemArrow">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
@@ -50,11 +50,11 @@
 <div
   class="XDocsPageNavigationSubmenu"
   data-navigation-submenu="Випуски Мавки"
-  data-navigation-submenu-shown="false"
+  data-navigation-submenu-shown="true"
 >
   <a
   href="./випуск-мавки-0.112.0.html"
-  class="XDocsPageNavigationSubmenuItem "
+  class="XDocsPageNavigationSubmenuItem active"
   data-navigation-item="Мавка 0.112.0"
 >
   Мавка 0.112.0
@@ -93,15 +93,31 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Архів Мавки</h1>
-<p><subject>Архів Мавки</subject> зберігає випуски <subject>Мавки</subject> та випуски
-проектів <subject>Мавки</subject>. А
-також інші документи, що стосуються
+    <h1>Мавка 0.112.0</h1>
+<p><subject>Мавка 0.112.0</subject> <keyword>це</keyword> написана з нуля на <subject>Цілі</subject> найбільш актуальна
+версія
 <subject>Мавки</subject>.</p>
+<p>Щоб використовувати <subject>Мавку 0.112.0</subject>, вам необхідно збудувати її власноруч.</p>
+<p>Для цього необхідно:</p>
+<ul>
+<li>Остання версія <subject>Цілі</subject></li>
+<li>Clang/Clang++/LLVM 18 або вище</li>
+<li>CMake</li>
+<li>Ninja</li>
+<li>Git</li>
+<li>Дистрибутив GNU/Linux</li>
+</ul>
+<p>Маючи усі необхідні залежності, клонуємо репозиторій <subject>Мавки</subject> та збудувати її:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">git clone https://github.com/mavka-ukr/mavka --depth=1
+cd mavka
+</code></div></pre>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">bash скрипти/збудувати.sh
+</code></div></pre>
+<p>Якщо все пройде добре, виконуваний файл буде знаходитись в <code>./build-l/мавка</code>.</p>
 
     <div class="XDocsPageContentBcFw">
-      
-      <a data-is-next="true" href="./випуск-мавки-0.112.0.html">Наступ</a >
+      <a data-is-prev="true" href="./index.html">Відступ</a>
+      <a data-is-next="true" href="./випуск-мавки-0.111.0.html">Наступ</a >
     </div>
   </div>
 </div>
