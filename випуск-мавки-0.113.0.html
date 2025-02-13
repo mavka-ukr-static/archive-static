@@ -9,7 +9,7 @@
 
   <meta name="description" content="">
 
-  <title>Мавка 0.112.0 | Архів Мавки</title>
+  <title>Мавка 0.113.0 | Архів Мавки</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/архів.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/архів.лого.svg">
@@ -54,14 +54,14 @@
 >
   <a
   href="./випуск-мавки-0.113.0.html"
-  class="XDocsPageNavigationSubmenuItem "
+  class="XDocsPageNavigationSubmenuItem active"
   data-navigation-item="Мавка 0.113.0"
 >
   Мавка 0.113.0
 </a>
 <a
   href="./випуск-мавки-0.112.0.html"
-  class="XDocsPageNavigationSubmenuItem active"
+  class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Мавка 0.112.0"
 >
   Мавка 0.112.0
@@ -124,35 +124,49 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Мавка 0.112.0</h1>
-<blockquote>
-<p>УВАГА: <subject>Мавка 0.112.0</subject> не актуальна!</p>
-</blockquote>
-<p><subject>Мавка 0.112.0</subject> <keyword>це</keyword> написана з нуля мовою <subject>Ціль</subject> версія <subject>
-Мавки</subject> на основі старої термінології <subject>Теорії Мавки</subject>.</p>
+    <h1>Мавка 0.113.0</h1>
+<p><subject>Мавка 0.113.0</subject> <keyword>це</keyword> написана з нуля мовою <subject>Ціль</subject> найбільш актуальна
+версія
+<subject>Мавки</subject>.</p>
+<p><subject>Мавка 0.113.0</subject> все ще активно допрацьовується.</p>
 <h2>GNU/Linux</h2>
-<p>Щоб використовувати <subject>Мавку 0.112.0</subject> в операційних системах на основі Linux, вам необхідно збудувати її
+<p>Щоб використовувати <subject>Мавку 0.113.0</subject> в операційних системах на основі Linux, вам необхідно збудувати її
 власноруч.</p>
 <p>Для цього необхідно:</p>
 <ul>
-<li><subject>Ціль 0.33.0</subject></li>
+<li><a href="https://xn--k1avt2b.xn--j1amh">Остання версія Цілі</a></li>
 <li>Clang/Clang++</li>
 <li>CMake</li>
 <li>Ninja</li>
 <li>Git</li>
 </ul>
 <p>Маючи усі необхідні залежності, клонуємо репозиторій <subject>Мавки</subject> та будуємо її:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">git clone https://github.com/mavka-ukr/mavka --branch 0.112.0 --single-branch --depth=1
+<pre><div class="XDocsCodeWrapper"><code class="hljs">git clone https://github.com/mavka-ukr/mavka --depth=1
 cd mavka
 </code></div></pre>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">bash скрипти/збудувати.sh
 </code></div></pre>
 <p>Якщо все пройде добре, виконуваний файл буде знаходитись в <code>./build-l/мавка</code>.</p>
+<p>Після цього ви можете, за бажанням, встановити <subject>Мавку</subject> на свою систему глобально:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">sudo cp ./build-l/мавка /usr/local/bin
+</code></div></pre>
+<p>Для отримання останніх оновлень, підтягуйте зміни з репозиторію та перебудовуйте:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">git pull
+</code></div></pre>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">bash скрипти/почистити.sh
+</code></div></pre>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">bash скрипти/збудувати.sh
+</code></div></pre>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">sudo cp ./build-l/мавка /usr/local/bin
+</code></div></pre>
+<h2>Windows</h2>
+<p>Файли для компіляції <subject>Мавки 0.113.0</subject> на Windows, а також автоматично cross-скомпільований exe-файл,
+можна отримати тут: <a href="https://github.com/mavka-ukr/mavka-windows">https://github.com/mavka-ukr/mavka-windows</a>.</p>
 
     
     <div class="XDocsPageContentBcFw">
-      <a data-is-prev="true" href="./випуск-мавки-0.113.0.html">Відступ</a>
-      <a data-is-next="true" href="./випуск-мавки-0.111.0.html">Наступ</a >
+      <a data-is-prev="true" href="./index.html">Відступ</a>
+      <a data-is-next="true" href="./випуск-мавки-0.112.0.html">Наступ</a >
     </div>
   </div>
 </div>
