@@ -128,44 +128,11 @@
 <p><subject>Мавка 0.113.0</subject> <keyword>це</keyword> найбільш актуальна
 версія <subject>Мавки</subject>, написана мовою <subject>Ціль</subject>.</p>
 <p><subject>Мавка 0.113.0</subject> все ще активно допрацьовується.</p>
-<h2>GNU/Linux x86_64</h2>
-<p>Щоб використовувати <subject>Мавку 0.113.0</subject> в операційних системах на основі Linux, вам необхідно збудувати її
-власноруч. Існує два способи.</p>
-<h3>Швидкий спосіб</h3>
-<p>Цей спосіб потребує лише встановленого Clang та Git.</p>
-<p>Клонуємо репозиторій з підготовленими файлами:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">git clone https://github.com/mavka-ukr-static/mavka-linux-x86_64 --depth=1
-</code></div></pre>
-<p>Відкриваємо клоновану теку:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">cd mavka-linux-x86_64
-</code></div></pre>
-<p>Будуємо:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">sh build.sh
-</code></div></pre>
-<p>Пробуємо:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">./out/мавка
-</code></div></pre>
-<h3>Спосіб для розробників</h3>
-<p>Цей спосіб вам знадобиться, якщо ви хочете вносити зміни в код. Окрім Clang та Git цей спосіб також
-потребує <a href="https://xn--k1avt2b.xn--j1amh">Цілі</a>.</p>
-<p>Клонуємо репозиторій <subject>Мавки</subject>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">git clone https://github.com/mavka-ukr/mavka --depth=1
-</code></div></pre>
-<p>Відкриваємо клоновану теку:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">cd mavka
-</code></div></pre>
-<p>Компілюємо файли <subject>Цілі</subject>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">TSIL=&quot;ціль&quot; sh external/scripts/prepare.sh linux-x86_64
-</code></div></pre>
-<p>Переходимо в підготовлену теку:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">cd build/linux-x86_64
-</code></div></pre>
-<p>Будуємо виконуваний файл:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">sh build.sh
-</code></div></pre>
-<p>Пробуємо:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">./out/мавка
-</code></div></pre>
+<h2>GNU/Linux</h2>
+<ul>
+<li><a href="https://xn--80aqreid0b.xn--80aaf6ah.xn--j1amh/2025-02-28-%D0%B1%D1%83%D0%B4%D1%83%D1%94%D0%BC%D0%BE-%D0%BC%D0%B0%D0%B2%D0%BA%D1%83-%D0%BD%D0%B0-linux-%D1%88%D0%B2%D0%B8%D0%B4%D0%BA%D0%B8%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D1%96%D0%B1.html">Як просто і швидко збудувати <subject>Мавку</subject> на Linux?</a></li>
+<li><a href="https://xn--80aqreid0b.xn--80aaf6ah.xn--j1amh/2025-02-28-%D0%B1%D1%83%D0%B4%D1%83%D1%94%D0%BC%D0%BE-%D0%BC%D0%B0%D0%B2%D0%BA%D1%83-%D0%BD%D0%B0-linux.html">Як збудувати <subject>Мавку</subject> на Linux з джерельних файлів?</a></li>
+</ul>
 <h2>Windows</h2>
 <p>Файли для компіляції <subject>Мавки 0.113.0</subject> на Windows x86_64, а також автоматично cross-скомпільований
 exe-файл,
